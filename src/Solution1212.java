@@ -9,7 +9,7 @@ public class Solution1212 {
         System.out.print(a);
 
         //a와 b 출력하기
-        int a = sc.nextInt();
+//        int a = sc.nextInt();
         int b = sc.nextInt();
 
         System.out.printf("a = %d\n", a);
@@ -23,7 +23,7 @@ public class Solution1212 {
         System.out.print(str);
 
         //대소문자 바꿔서 출력하기
-        String str = sc.next();
+//        String str = sc.next();
         String alpabet = "";
 
         char[] charArray = str.toCharArray();
