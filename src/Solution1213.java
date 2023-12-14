@@ -7,6 +7,7 @@ public class Solution1213 {
         Solution1213 sol = new Solution1213();
         Scanner sc = new Scanner(System.in);
 
+          //기초 day2
 //        //덧셈식 출력하기
 //        int a = sc.nextInt();
 //        int b = sc.nextInt();
@@ -44,7 +45,10 @@ public class Solution1213 {
 //        int s=2;
 //        sol.solution(my_string,overwrite_string,s);
 
-        //입문 day11 주사위의 개수
+
+
+        //입문 day11
+        //주사위의 개수
 //        int[]box = new int[3];
 //        for(int i=0; i<box.length; i++){
 //            box[i]=sc.nextInt();

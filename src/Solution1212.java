@@ -4,7 +4,8 @@ public class Solution1212 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //문자열 출려하기
+        //기초 day1
+        //문자열 출력하기
         String a = sc.next();
         System.out.print(a);
 
