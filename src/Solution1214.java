@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -180,7 +181,20 @@ public class Solution1214 {
     }
 
     //소인수분해
-    
+    public ArrayList solution9(int n) {
+
+        ArrayList answer = new ArrayList<>();
+
+        for(int i=2; i<=n; i++) {
+            if(n % i == 0) {
+                while(n % i == 0) {
+                    n /= i;
+                }
+                answer.add(i);
+            }
+        }
+        return answer;
+    }
 
 
 }
