@@ -64,5 +64,66 @@ public class Solution1218 {
         return answer;
     }
 
-    
+    //입문 day14
+    //가까운 수
+    public int solution5(int[] array, int n) {
+        int answer = 0;
+        int diff = 0;
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < array.length; i++) {
+            diff = Math.abs(n - array[i]);
+            if (diff < min) {
+                min = diff;
+                answer = array[i];
+
+            } else if (diff == min && array[i] < answer) {
+                answer = array[i];
+            }
+        }
+
+        return answer;
+    }
+
+
+    //369게임
+    public int solution6(int order) {
+        int answer = 0;
+        String orderString = Integer.toString(order); // 숫자를 문자열로 변환
+        String[] numArray = orderString.split(""); // 문자열을 한 글자씩 나눠 배열에 저장
+
+        // 배열의 값이 3의 배수인 경우 answer를 증가
+        for (int i = 0; i < numArray.length; i++) {
+            int digit = Integer.parseInt(numArray[i]); // 문자열을 다시 정수로 변환
+            if (digit == 3 || digit == 6 || digit == 9) {
+                answer++;
+            }
+        }
+        return answer;
+    }
+
+
+    //암호해독
+    public String solution7(String cipher, int code) {
+        String answer = "";
+        for (int i = code - 1; i < cipher.length(); i += code) {
+            answer += cipher.charAt(i);
+        }
+        return answer;
+    }
+
+    //대문자와 소문자
+    public String solution8(String my_string) {
+        String answer = "";
+        char[] charArray = my_string.toCharArray();
+
+        for (int index = 0; index < charArray.length; index++) {
+            if (Character.isUpperCase(charArray[index])) {
+                answer += String.valueOf(charArray[index]).toLowerCase();
+            } else
+                answer += String.valueOf(charArray[index]).toUpperCase();
+        }
+
+        return answer;
+    }
 }
