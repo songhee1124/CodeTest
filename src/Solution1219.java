@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Solution1219 {
@@ -28,9 +30,20 @@ public class Solution1219 {
 //        sol.solution3(num_list);
 
         //이어 붙인 수
-        int[] num_list ={3,4,5,2,1};
-        sol.solution4(num_list);
-        
+//        int[] num_list ={3,4,5,2,1};
+//        sol.solution4(num_list);
+
+
+        //기초 day6
+        //마지막 두 원소
+        int[] num_list ={2,1,6};
+        sol.solution5(num_list);
+
+        //수 조작하기1
+        int n=0;
+        String control ="wsdawsdassw";
+        sol.solutio6(n,control);
+
     }
     //기초 day5
     //코드 처리하기
@@ -106,6 +119,43 @@ public class Solution1219 {
 
         }
         answer = Integer.parseInt(even) + Integer.parseInt(odd);
+        System.out.println(answer);
+        return answer;
+    }
+
+    //기초 day6
+    //마지막 두 원소
+    public List solution5(int[] num_list) {
+        List<Integer> answer = new ArrayList<>();
+
+        for(int i = 0; i < num_list.length; i++){
+            answer.add(num_list[i]);
+        }
+
+        if(num_list[num_list.length - 1] > num_list[num_list.length - 2]){
+            answer.add(num_list[num_list.length - 1] - num_list[num_list.length - 2]);
+        } else {
+            answer.add(num_list[num_list.length - 1] * 2);
+        }
+        System.out.println(answer);
+        return answer;
+    }
+
+    //수 조작하기1
+    public int solutio6(int n, String control) {
+        int answer = 0;
+        String [] str = control.split("");
+        for(int i=0; i< str.length; i++) {
+            if (str[i].equals("w")) {
+                n+=1;
+            } else if (str[i].equals("s")) {
+                n-=1;
+            } else if (str[i].equals("d")) {
+                n += 10;
+            } else
+                n -= 10;
+            answer = n;
+        }
         System.out.println(answer);
         return answer;
     }
