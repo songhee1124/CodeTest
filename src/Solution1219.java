@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -43,6 +44,17 @@ public class Solution1219 {
         int n=0;
         String control ="wsdawsdassw";
         sol.solutio6(n,control);
+
+        //입문 day15
+        //영어가 싫어요
+        String numbers="onetwothreefourfivesixseveneightnine";
+        sol.solution7(numbers);
+
+        //인덱스 바꾸기
+        String my_string = "hello";
+        int num1=1;
+        int num2= 2;
+        sol.solution8(my_string,num1,num2);
 
     }
     //기초 day5
@@ -158,5 +170,73 @@ public class Solution1219 {
         }
         System.out.println(answer);
         return answer;
+    }
+
+    // 입문day15
+    //영어가 싫어요
+    public long solution7(String numbers) {
+        long answer = 0;
+        numbers=numbers.replace("zero", "0");
+        numbers=numbers.replace("one", "1");
+        numbers=numbers.replace("two", "2");
+        numbers=numbers.replace("three", "3");
+        numbers=numbers.replace("four", "4");
+        numbers=numbers.replace("five", "5");
+        numbers=numbers.replace("six", "6");
+        numbers=numbers.replace("seven", "7");
+        numbers=numbers.replace("eight", "8");
+        numbers=numbers.replace("nine", "9");
+        answer= Long.parseLong(numbers);
+        System.out.println(answer);
+        return answer;
+    }
+
+    //인덱스 바꾸기
+    public String solution8(String my_string, int num1, int num2) {
+        String answer = "";
+        String[]str = my_string.split("");
+        String temp = str[num1];
+        str[num1] =str[num2];
+        str[num2]=temp;
+
+        answer = String.join("", str);
+        System.out.println(answer);
+        return answer;
+    }
+
+    //한번만 등장한 문자
+    public String solution9(String s) {
+        String answer = "";
+        String[] str = s.split("");
+
+        Arrays.sort(str);
+
+        for (int i = 0; i < str.length; i++) {
+            int count = 0;
+            for (int j = 0; j < str.length; j++) {
+                if (str[i].equals(str[j])) {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                answer += str[i];
+            }
+        }
+        return answer;
+    }
+    //약수 구하기
+    public int[] solution10(int n) {
+        int[] answer = new int[n];
+        int index = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                answer[index] = i;
+                index++;
+            }
+        }
+
+        // 배열 크기 조정: 실제 약수의 개수만큼 배열을 재조정합니다.
+        return Arrays.copyOf(answer, index);
     }
 }
