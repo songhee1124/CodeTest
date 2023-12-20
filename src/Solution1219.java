@@ -239,4 +239,6 @@ public class Solution1219 {
         // 배열 크기 조정: 실제 약수의 개수만큼 배열을 재조정합니다.
         return Arrays.copyOf(answer, index);
     }
+
+
 }
