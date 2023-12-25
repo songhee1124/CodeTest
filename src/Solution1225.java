@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Solution1225 {
     public static void main(String[] args) {
@@ -10,6 +12,8 @@ public class Solution1225 {
 
      String my_string ="Bcad";
      sol.solution7(my_string);
+
+
     }
 
 
@@ -113,5 +117,64 @@ public class Solution1225 {
         char[] c = my_string.toLowerCase().toCharArray();
         Arrays.sort(c);
         return new String(c);
+    }
+
+
+    //기초 day 9
+    // 배열 만들기 5
+    public int[] solution9(String[] intStrs, int k, int s, int l) {
+        List<Integer> result = new ArrayList<>();
+
+        for (String str : intStrs) {
+            int i = Integer.parseInt(str.substring(s, s + l));
+            if (i > k) {
+                result.add(i);
+            }
+        }
+
+        return result.stream().mapToInt(i->i).toArray();
+    }
+
+    //부분 문자열 이어 붙여 문자열 만들기
+    public String solution10(String[] my_strings, int[][] parts) {
+        String answer = "";
+        for(int i=0; i<my_strings.length; i++){
+            String str = my_strings[i];
+
+            answer += str.substring(parts[i][0], parts[i][1]+1);
+        }
+        return answer;
+    }
+
+    //문자열의 뒤의 n글자
+    public String solution11(String my_string, int n) {
+        String answer = "";
+        answer=my_string.substring(my_string.length()-n);
+        return answer;
+    }
+
+    //접미사 배열
+    public String[] solution12(String my_string) {
+        int length = my_string.length();
+        String[] suffixes = new String[length];
+
+        // 모든 접미사 생성
+        for (int i = 0; i < length; i++) {
+            suffixes[i] = my_string.substring(i);
+        }
+
+        // 접미사 배열을 사전순으로 정렬
+        Arrays.sort(suffixes);
+
+        return suffixes;
+    }
+
+    //접미사인지 확인하기
+    public int solution13(String my_string, String is_suffix) {
+        int answer = 0;
+        if(my_string.endsWith(is_suffix)){
+            answer = 1;
+        }
+        return answer;
     }
 }
