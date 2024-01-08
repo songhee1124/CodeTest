@@ -17,7 +17,7 @@ public class Solution1229 {
 //    sol.solution(arr, intervals);
 
     int []arr = {1, 2, 1, 4, 5, 2, 9};
-    sol.solution(arr);
+//    sol.solution(arr);
 
     }
     //기초day12
@@ -118,51 +118,51 @@ public class Solution1229 {
     }
 
     //2의 영역 다른 방법
-    public int[] solution(int[] arr) {
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<Integer> result = new ArrayList<>();
-
-        for(int i=0; i<arr.length; i++){
-            if(arr[i]==2){
-                list.add(i);
-                // System.out.println(list);
-                // System.out.println(list.get(0));
-                // System.out.println(list.get(list.size()-1));
-            }
-        }
-
-        if(list.size() == 1){
-            return new int[]{2};
-        } else if (list.size() < 1) {
-            // 2가 적어도 두 번 이상 나와야 함
-            return new int[]{-1};
-        }
-
-
-        for(int j=list.get(0); j<=list.get(list.size()-1); j++){
-            result.add(arr[j]);
-        }
-
-        // Convert ArrayList<Integer> to int[]
-        int[] answer = new int[result.size()];
-        for (int i = 0; i < result.size(); i++) {
-            answer[i] = result.get(i);
-        }
-
-        return answer;
-    }
-
-
-    //배열 조각하기
-    public int[] solution(int[] arr, int[] query) {
-        int[] answer = new int [arr.length];
-        for(int i =0; i<query.length; i++){
-            if(i%2==0){
-               answer= Arrays.copyOfRange(arr, 0, query[i] + 1);
-            }
-            else
-                answer=Arrays.copyOfRange(arr, query[i], arr.length);
-        }
-        return answer;
-    }
+//    public int[] solution(int[] arr) {
+//        ArrayList<Integer> list = new ArrayList<>();
+//        ArrayList<Integer> result = new ArrayList<>();
+//
+//        for(int i=0; i<arr.length; i++){
+//            if(arr[i]==2){
+//                list.add(i);
+//                // System.out.println(list);
+//                // System.out.println(list.get(0));
+//                // System.out.println(list.get(list.size()-1));
+//            }
+//        }
+//
+//        if(list.size() == 1){
+//            return new int[]{2};
+//        } else if (list.size() < 1) {
+//            // 2가 적어도 두 번 이상 나와야 함
+//            return new int[]{-1};
+//        }
+//
+//
+//        for(int j=list.get(0); j<=list.get(list.size()-1); j++){
+//            result.add(arr[j]);
+//        }
+//
+//        // Convert ArrayList<Integer> to int[]
+//        int[] answer = new int[result.size()];
+//        for (int i = 0; i < result.size(); i++) {
+//            answer[i] = result.get(i);
+//        }
+//
+//        return answer;
+//    }
+//
+//
+//    //배열 조각하기
+//    public int[] solution(int[] arr, int[] query) {
+//        int[] answer = new int [arr.length];
+//        for(int i =0; i<query.length; i++){
+//            if(i%2==0){
+//               answer= Arrays.copyOfRange(arr, 0, query[i] + 1);
+//            }
+//            else
+//                answer=Arrays.copyOfRange(arr, query[i], arr.length);
+//        }
+//        return answer;
+//    }
 }
