@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class solution0102 {
+public class Solution0102 {
     public static void main(String[] args) {
 
     }
