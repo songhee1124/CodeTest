@@ -4,11 +4,11 @@ import java.util.List;
 
 public class Solution0118 {
     public static void main(String[] args) {
-    Solution0118 sol = new Solution0118();
+        Solution0118 sol = new Solution0118();
 
 //    String myStr = "baconlettucetomato";
-    String myStr ="abcb";
-    sol.solution(myStr);
+        String myStr = "abcb";
+        sol.solution(myStr);
 
     }
 
@@ -28,7 +28,7 @@ public class Solution0118 {
             }
             // 결과 배열이 비어있는 경우
             else if (answer.length == 0) {
-                answer=new String[]{"empty"};
+                answer = new String[]{"empty"};
                 System.out.println(Arrays.toString(answer));
                 return answer;
             }

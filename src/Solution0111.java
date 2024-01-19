@@ -10,11 +10,11 @@ public class Solution0111 {
 //        sol.solution3(mystring);
 
 //        String mystring = "dxccxbbbxaaaa";
-          String mystring = "axxbxx";
-          sol.solution4(mystring);
+        String mystring = "axxbxx";
+        sol.solution4(mystring);
 
-          String binomial ="43 + 12";
-          sol.solution5(binomial);
+        String binomial = "43 + 12";
+        sol.solution5(binomial);
     }
 
     //기초 day17
@@ -99,11 +99,11 @@ public class Solution0111 {
         String[] str = binomial.split("\\s");
         System.out.println(Arrays.toString(str));
         int answer = 0;
-        int a= Integer.parseInt(str[0]);
+        int a = Integer.parseInt(str[0]);
         System.out.println(a);
-        int b= Integer.parseInt(str[2]);
+        int b = Integer.parseInt(str[2]);
         System.out.println(b);
-        String op= str[1];
+        String op = str[1];
         System.out.println(op);
 
 //        if("+".equals(op)){
@@ -116,8 +116,6 @@ public class Solution0111 {
         System.out.println(answer);
         return answer;
     }
-
-
 
 
 }
