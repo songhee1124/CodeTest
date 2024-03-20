@@ -1,6 +1,8 @@
 # Default ignored files
 /shelf/
-../workspace.xml
+# ../workspace.xml
+out/
+.idea
 
 # Editor-based HTTP Client requests
 /httpRequests/
@@ -8,4 +10,4 @@
 /dataSources/
 /dataSources.local.xml
 
-/out
+
