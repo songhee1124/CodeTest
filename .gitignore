@@ -2,7 +2,7 @@
 /shelf/
 # ../workspace.xml
 out/
-.idea
+.idea/
 
 # Editor-based HTTP Client requests
 /httpRequests/
